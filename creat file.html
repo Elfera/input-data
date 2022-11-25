@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+	function createfile(){
+        var text ='welcome to gtmix.org';
+        var filedata = new Blob([text],{type:'text/plain'});
+        var fileresult = window.URL.createObjectURL(filedata);
+        var getlink = document.getElementById('myfile');
+        getlink.href= fileresult;
+    }
+	</script>
+</head>
+
+<body>
+    <a download="myfile.txt"id="myfile">download</a>
+	<input type = "button" value="create file" onclick="createfile()"/>
+
+	
+</body>
+</html>
